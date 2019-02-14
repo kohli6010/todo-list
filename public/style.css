@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffc600;
+  font-weight: 500;
+  font-family: Prompt;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 800px;
+  margin: 0 auto;
+}
+
+.form {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  border: 10px solid #F7F7F7;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+}
+
+.form span {
+  padding: 40px;
+  font-size: 3em;
+  margin: 0 auto;
+}
+
+.form input {
+  width: 25%;
+  margin: 10px;
+  text-align: center;
+  height: 100%;
+  margin: 0;
+  font-size: 20px;
+
+}
+
+.shoppingList {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.shoppingList > li {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  height: 50px;
+  line-height: 50px;
+  background-color: white;
+  font-size: 20px;
+}
+
+span > li {
+  padding: 0;
+}
+
+.icon {
+  display: inline-block;
+  height: 100%;
+  background-color: rgb(224, 44, 44);
+  width: 50px;
+  transform: translateX(-100%);
+  transition: all 0.5s;
+  opacity: 0;
+  text-align: center;
+  color: white;
+}
+
+.update {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.pencil {
+  display: inline-block;
+  height: 100%;
+  background-color: greenyellow;
+  width: 50px;
+  transform: translateX(100%);
+  transition: all 0.5s;
+  opacity: 0;
+  text-align: center;
+  color: white;
+}
+
+input:hover {
+    border: 5px solid #F7F7F7;
+}
+
+li:hover .icon {
+  display: inline-block;
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+li:hover .pencil {
+  display: inline-block;
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+input {
+  border: none;
+  outline: none;
+  padding: 13px 13px 13px 20px;
+}
+
+li:nth-child(2n) {
+  background-color: rgb(230, 227, 227);
+}
+
+.input {
+  transition: all 1s;
+}
+
+button {
+  border: none;
+  width: 10%;
+}
+
+/* input:focus {
+    border: 2px solid #2598a6;
+} */
+
+.form span:hover .form > input {
+  display: inline;
+}
+
+.shoppingList li:nth-child(even) {
+  transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
+}
+
+.shoppingList li:nth-child(odd) {
+  transform: perspective(100px) rotateX(-3deg) translateY(3px);
+
+}
