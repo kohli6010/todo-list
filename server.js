@@ -3,6 +3,7 @@ const server = express();
 const path = require("path");
 const bodyparser = require("body-parser");
 const mongoose = require("mongoose");
+const port = process.env.PORT || 3001;
 const shoppingcart = require("./models/todoSchma");
 mongoose.connect("mongodb://rk:123456a@ds331135.mlab.com:31135/shoppingcart", {
   useNewUrlParser: true
@@ -37,6 +38,6 @@ server.put("/update/:id", async (req, res) => {
   console.log(store);
   res.send(store);
 });
-server.listen(3001, () => {
+server.listen(port, () => {
   console.log(`server is running`);
 });
